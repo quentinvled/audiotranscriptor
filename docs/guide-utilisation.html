@@ -1,0 +1,489 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>🎤 Guide d'utilisation - Transcripteur Audio PRO</title>
+    <style>
+        body { 
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; 
+            margin: 40px; 
+            line-height: 1.6; 
+            background-color: #f8f9fa;
+        }
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            background: white;
+            padding: 40px;
+            border-radius: 15px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+        }
+        .header { 
+            background: linear-gradient(135deg, #667eea, #764ba2); 
+            color: white; 
+            padding: 30px; 
+            border-radius: 15px; 
+            text-align: center; 
+            margin-bottom: 30px; 
+        }
+        .section { 
+            background: #f8f9fa; 
+            padding: 25px; 
+            margin: 20px 0; 
+            border-radius: 10px; 
+            border-left: 5px solid #667eea; 
+        }
+        .warning { 
+            background: #fff3cd; 
+            border-left-color: #ffc107; 
+        }
+        .success { 
+            background: #d4edda; 
+            border-left-color: #28a745; 
+        }
+        .danger {
+            background: #f8d7da;
+            border-left-color: #dc3545;
+        }
+        .step { 
+            background: white; 
+            padding: 15px; 
+            margin: 10px 0; 
+            border-radius: 8px; 
+            border: 1px solid #dee2e6; 
+            display: flex;
+            align-items: center;
+        }
+        .step-number {
+            background: #667eea;
+            color: white;
+            width: 30px;
+            height: 30px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-right: 15px;
+            font-weight: bold;
+        }
+        code { 
+            background: #e9ecef; 
+            padding: 3px 6px; 
+            border-radius: 4px; 
+            font-family: 'Courier New', monospace;
+        }
+        .file-structure {
+            background: #2d3748;
+            color: #e2e8f0;
+            padding: 20px;
+            border-radius: 8px;
+            font-family: 'Courier New', monospace;
+            overflow-x: auto;
+        }
+        .tips-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 20px;
+            margin-top: 20px;
+        }
+        .tip-card {
+            background: white;
+            padding: 20px;
+            border-radius: 8px;
+            border: 1px solid #dee2e6;
+            transition: transform 0.2s;
+        }
+        .tip-card:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+        }
+        .feature-list {
+            list-style: none;
+            padding: 0;
+        }
+        .feature-list li {
+            padding: 8px 0;
+            border-bottom: 1px solid #eee;
+        }
+        .feature-list li:before {
+            content: "✅ ";
+            margin-right: 10px;
+        }
+        h1, h2, h3 {
+            color: #2d3748;
+        }
+        a {
+            color: #667eea;
+            text-decoration: none;
+        }
+        a:hover {
+            text-decoration: underline;
+        }
+        .toc {
+            background: #f1f3f4;
+            padding: 20px;
+            border-radius: 8px;
+            margin-bottom: 30px;
+        }
+        .toc ul {
+            list-style: none;
+            padding-left: 20px;
+        }
+        .toc > ul {
+            padding-left: 0;
+        }
+        .toc a {
+            color: #495057;
+            text-decoration: none;
+            padding: 5px 0;
+            display: block;
+        }
+        .toc a:hover {
+            color: #667eea;
+            background: rgba(102, 126, 234, 0.1);
+            padding-left: 10px;
+            border-radius: 4px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>🎤 TRANSCRIPTEUR AUDIO PRO</h1>
+            <p>Guide d'utilisation complet • Version 2.0</p>
+        </div>
+
+        <div class="toc">
+            <h3>📋 Table des matières</h3>
+            <ul>
+                <li><a href="#demarrage">🚀 Démarrage rapide</a></li>
+                <li><a href="#cle-api">🔑 Configuration clé API</a></li>
+                <li><a href="#interface">📱 Interface utilisateur</a></li>
+                <li><a href="#fonctionnalites">📊 Fonctionnalités avancées</a></li>
+                <li><a href="#troubleshooting">⚠️ Résolution de problèmes</a></li>
+                <li><a href="#structure">📁 Structure des dossiers</a></li>
+                <li><a href="#conseils">💡 Conseils pro</a></li>
+            </ul>
+        </div>
+
+        <div class="section success" id="demarrage">
+            <h2>🚀 Démarrage rapide (3 étapes)</h2>
+            <div class="step">
+                <div class="step-number">1</div>
+                <div>
+                    <strong>Installation :</strong> Double-cliquez sur <code>1_INSTALLER.bat</code> (une seule fois)
+                    <br><small>Installe Python et toutes les dépendances nécessaires</small>
+                </div>
+            </div>
+            <div class="step">
+                <div class="step-number">2</div>
+                <div>
+                    <strong>Configuration :</strong> Double-cliquez sur <code>3_CONFIGURER-CLE-API.bat</code>
+                    <br><small>Configure votre clé OpenAI de manière sécurisée</small>
+                </div>
+            </div>
+            <div class="step">
+                <div class="step-number">3</div>
+                <div>
+                    <strong>Utilisation :</strong> Double-cliquez sur <code>2_LANCER.bat</code>
+                    <br><small>Lance l'application dans votre navigateur</small>
+                </div>
+            </div>
+        </div>
+
+        <div class="section" id="cle-api">
+            <h2>🔑 Obtenir une clé API OpenAI</h2>
+            
+            <h3>Étapes détaillées :</h3>
+            <ol>
+                <li><strong>Aller sur le site :</strong> <a href="https://platform.openai.com/api-keys" target="_blank">platform.openai.com/api-keys</a></li>
+                <li><strong>Créer un compte :</strong> Utilisez votre email ou connectez-vous avec Google/GitHub</li>
+                <li><strong>Vérifier votre compte :</strong> OpenAI peut demander une vérification par SMS</li>
+                <li><strong>Ajouter un moyen de paiement :</strong> Nécessaire pour utiliser l'API (même avec crédits gratuits)</li>
+                <li><strong>Créer une clé :</strong> Cliquez sur "Create new secret key"</li>
+                <li><strong>Nommer votre clé :</strong> Par exemple "Transcripteur Audio"</li>
+                <li><strong>Copier la clé :</strong> Elle commence par <code>sk-proj-</code> ou <code>sk-</code></li>
+                <li><strong>Configurer :</strong> Utilisez <code>3_CONFIGURER-CLE-API.bat</code> pour la sauvegarder</li>
+            </ol>
+
+            <div class="warning">
+                <h4>⚠️ Important :</h4>
+                <ul>
+                    <li>Gardez votre clé API secrète</li>
+                    <li>Ne la partagez jamais</li>
+                    <li>OpenAI facture à l'utilisation (environ 0,006$ par minute d'audio)</li>
+                    <li>Vous pouvez définir des limites de dépenses dans votre compte OpenAI</li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="section" id="interface">
+            <h2>📱 Utilisation de l'interface</h2>
+            
+            <div class="tips-grid">
+                <div class="tip-card">
+                    <h3>📁 Upload de fichiers</h3>
+                    <ul class="feature-list">
+                        <li><strong>Formats supportés :</strong> MP3, WAV, FLAC, M4A, MP4, WEBM</li>
+                        <li><strong>Taille maximale :</strong> 25MB par fichier</li>
+                        <li><strong>Multi-fichiers :</strong> Glissez-déposez plusieurs fichiers</li>
+                        <li><strong>Aperçu :</strong> Écoutez vos fichiers avant transcription</li>
+                    </ul>
+                </div>
+
+                <div class="tip-card">
+                    <h3>⚙️ Paramètres</h3>
+                    <ul class="feature-list">
+                        <li><strong>Langue :</strong> Auto-détection ou langue spécifique</li>
+                        <li><strong>Résumés :</strong> Bref, Points clés, Analyse complète</li>
+                        <li><strong>Export auto :</strong> Sauvegarde dans "exports"</li>
+                        <li><strong>Parallélisme :</strong> Traitement simultané</li>
+                    </ul>
+                </div>
+
+                <div class="tip-card">
+                    <h3>📊 Métriques</h3>
+                    <ul class="feature-list">
+                        <li><strong>Progression :</strong> Barre de progression en temps réel</li>
+                        <li><strong>Temps estimé :</strong> Calcul automatique</li>
+                        <li><strong>Système :</strong> Utilisation RAM et disque</li>
+                        <li><strong>Statistiques :</strong> Mots, caractères, temps de lecture</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <div class="section" id="fonctionnalites">
+            <h2>📊 Fonctionnalités avancées</h2>
+            
+            <h3>🔄 Traitement parallèle</h3>
+            <p>Le transcripteur peut traiter plusieurs fichiers simultanément pour gagner du temps. Vous pouvez ajuster le nombre de fichiers traités en parallèle dans les paramètres (1-5 fichiers).</p>
+            
+            <h3>💾 Export automatique</h3>
+            <p>Vos transcriptions sont automatiquement sauvegardées dans le dossier <code>exports/export_AAAAMMJJ_HHMMSS/</code> avec horodatage. Chaque export contient :</p>
+            <ul>
+                <li>📄 Transcriptions (.txt)</li>
+                <li>📝 Résumés (si activés)</li>
+                <li>📊 Métadonnées du traitement</li>
+            </ul>
+            
+            <h3>🎯 Résumés intelligents</h3>
+            <div class="tips-grid">
+                <div class="tip-card">
+                    <h4>📄 Résumé bref</h4>
+                    <p>2-3 phrases essentielles qui capturent l'idée principale du contenu audio.</p>
+                </div>
+                <div class="tip-card">
+                    <h4>🔹 Points clés</h4>
+                    <p>Liste structurée et hiérarchique des informations importantes avec puces.</p>
+                </div>
+                <div class="tip-card">
+                    <h4>📋 Analyse complète</h4>
+                    <p>Bilan détaillé avec résumé général, points principaux et conclusion.</p>
+                </div>
+            </div>
+
+            <h3>🎨 Interface moderne</h3>
+            <ul class="feature-list">
+                <li>Design responsive et moderne</li>
+                <li>Édition des transcriptions en temps réel</li>
+                <li>Système d'onglets pour organiser les résultats</li>
+                <li>Boutons de téléchargement individuels et groupés</li>
+                <li>Cache intelligent pour éviter les re-calculs</li>
+            </ul>
+        </div>
+
+        <div class="section warning" id="troubleshooting">
+            <h2>⚠️ Résolution de problèmes</h2>
+            
+            <div class="tips-grid">
+                <div class="tip-card danger">
+                    <h3>🔴 "Python non détecté"</h3>
+                    <p><strong>Solution :</strong></p>
+                    <ol>
+                        <li>Installez Python depuis <a href="https://www.python.org" target="_blank">python.org</a></li>
+                        <li>⚠️ <strong>Important :</strong> Cochez "Add Python to PATH" lors de l'installation</li>
+                        <li>Redémarrez votre ordinateur</li>
+                        <li>Relancez <code>1_INSTALLER.bat</code></li>
+                    </ol>
+                </div>
+
+                <div class="tip-card danger">
+                    <h3>🔴 "Clé API invalide"</h3>
+                    <p><strong>Solutions :</strong></p>
+                    <ul>
+                        <li>Vérifiez votre clé sur <a href="https://platform.openai.com/api-keys" target="_blank">platform.openai.com</a></li>
+                        <li>Assurez-vous que votre compte OpenAI est actif</li>
+                        <li>Vérifiez que vous avez un moyen de paiement configuré</li>
+                        <li>Relancez <code>3_CONFIGURER-CLE-API.bat</code></li>
+                    </ul>
+                </div>
+
+                <div class="tip-card danger">
+                    <h3>🔴 "Fichier trop volumineux"</h3>
+                    <p><strong>Solutions :</strong></p>
+                    <ul>
+                        <li>Compressez votre audio (utilisez Audacity ou VLC)</li>
+                        <li>Convertissez en MP3 (format plus compact)</li>
+                        <li>Coupez votre fichier en plusieurs parties</li>
+                        <li>Réduisez la qualité audio (128 kbps suffisent)</li>
+                    </ul>
+                </div>
+
+                <div class="tip-card danger">
+                    <h3>🔴 "Application lente"</h3>
+                    <p><strong>Optimisations :</strong></p>
+                    <ul>
+                        <li>Réduisez le nombre de fichiers simultanés (paramètres)</li>
+                        <li>Fermez les autres applications</li>
+                        <li>Vérifiez votre connexion internet</li>
+                        <li>Redémarrez l'application</li>
+                    </ul>
+                </div>
+
+                <div class="tip-card danger">
+                    <h3>🔴 "Erreur de transcription"</h3>
+                    <p><strong>Causes communes :</strong></p>
+                    <ul>
+                        <li>Audio de mauvaise qualité</li>
+                        <li>Format non supporté</li>
+                        <li>Fichier corrompu</li>
+                        <li>Connexion internet instable</li>
+                    </ul>
+                </div>
+
+                <div class="tip-card danger">
+                    <h3>🔴 "Page blanche"</h3>
+                    <p><strong>Solutions :</strong></p>
+                    <ul>
+                        <li>Attendez quelques secondes (chargement initial)</li>
+                        <li>Actualisez la page (F5)</li>
+                        <li>Vérifiez que <code>2_LANCER.bat</code> est toujours ouvert</li>
+                        <li>Redémarrez l'application</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <div class="section" id="structure">
+            <h2>📁 Structure des dossiers</h2>
+            <div class="file-structure">
+Transcripteur-Audio-PRO/
+├── 📋 LISEZ-MOI-DABORD.txt          # Instructions de démarrage
+├── 🔧 1_INSTALLER.bat                # Installation automatique
+├── 🚀 2_LANCER.bat                   # Lancement de l'app
+├── ⚙️  3_CONFIGURER-CLE-API.bat      # Configuration API
+├── 📱 transcripteur_pro.py           # Application principale
+├── 🔐 config_api.py                  # Gestion sécurisée des clés
+├── 📦 requirements.txt               # Dépendances Python
+├── 📁 temp/                          # Fichiers temporaires
+├── 📁 exports/                       # Vos transcriptions sauvegardées
+│   └── export_20241213_1430/         # Export avec horodatage
+│       ├── transcriptions/           # Fichiers .txt
+│       └── resumes/                  # Résumés automatiques
+├── 📁 config/                        # Configuration
+│   ├── settings.json                 # Paramètres utilisateur
+│   └── api_key.env                   # Clé API (sécurisée)
+└── 📁 docs/                          # Documentation
+    ├── guide-utilisation.html        # Ce guide
+    └── troubleshooting.md            # Aide supplémentaire
+            </div>
+        </div>
+
+        <div class="section success" id="conseils">
+            <h2>💡 Conseils pro</h2>
+            
+            <div class="tips-grid">
+                <div class="tip-card">
+                    <h3>🎙️ Qualité audio</h3>
+                    <ul>
+                        <li>Enregistrez dans un environnement calme</li>
+                        <li>Utilisez un micro de qualité si possible</li>
+                        <li>Évitez les bruits de fond</li>
+                        <li>Parlez clairement et distinctement</li>
+                    </ul>
+                </div>
+
+                <div class="tip-card">
+                    <h3>⚡ Performance</h3>
+                    <ul>
+                        <li>Fermez les autres applications gourmandes</li>
+                        <li>Utilisez une connexion internet stable</li>
+                        <li>Traitez les gros fichiers un par un</li>
+                        <li>Surveillez l'utilisation de la RAM</li>
+                    </ul>
+                </div>
+
+                <div class="tip-card">
+                    <h3>💾 Sauvegarde</h3>
+                    <ul>
+                        <li>Activez l'export automatique</li>
+                        <li>Sauvegardez régulièrement vos exports</li>
+                        <li>Nommez vos fichiers de manière claire</li>
+                        <li>Gardez une copie de vos audios originaux</li>
+                    </ul>
+                </div>
+
+                <div class="tip-card">
+                    <h3>🔄 Workflow</h3>
+                    <ul>
+                        <li>Organisez vos fichiers par projet</li>
+                        <li>Utilisez les résumés pour un aperçu rapide</li>
+                        <li>Éditez les transcriptions si nécessaire</li>
+                        <li>Exportez en ZIP pour partager facilement</li>
+                    </ul>
+                </div>
+
+                <div class="tip-card">
+                    <h3>💰 Coûts</h3>
+                    <ul>
+                        <li>~0,006$ par minute d'audio transcrite</li>
+                        <li>Définissez des limites dans votre compte OpenAI</li>
+                        <li>Surveillez votre consommation</li>
+                        <li>Optimisez la durée de vos enregistrements</li>
+                    </ul>
+                </div>
+
+                <div class="tip-card">
+                    <h3>🔧 Maintenance</h3>
+                    <ul>
+                        <li>Nettoyez le dossier <code>temp/</code> régulièrement</li>
+                        <li>Mettez à jour vos dépendances si nécessaire</li>
+                        <li>Redémarrez l'app en cas de problème</li>
+                        <li>Sauvegardez vos paramètres importants</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <div class="section">
+            <h2>🆘 Support technique</h2>
+            <p>Si vous rencontrez des problèmes non résolus par ce guide :</p>
+            <ol>
+                <li>📋 Consultez d'abord la section "Résolution de problèmes"</li>
+                <li>🔄 Redémarrez complètement l'application</li>
+                <li>🔧 Vérifiez que tous les fichiers .bat sont dans le même dossier</li>
+                <li>🌐 Assurez-vous d'avoir une connexion internet stable</li>
+                <li>💻 Redémarrez votre ordinateur en dernier recours</li>
+            </ol>
+
+            <div class="warning">
+                <h4>📞 Informations de débogage utiles :</h4>
+                <ul>
+                    <li>Version de Windows</li>
+                    <li>Version de Python (<code>python --version</code>)</li>
+                    <li>Message d'erreur exact</li>
+                    <li>Étapes pour reproduire le problème</li>
+                </ul>
+            </div>
+        </div>
+
+        <footer style="text-align: center; margin-top: 50px; padding-top: 30px; border-top: 2px solid #eee; color: #666;">
+            <h3>🎤 <strong>Transcripteur Audio PRO</strong></h3>
+            <p>Made with ❤️ for professionals • Version 2.0 • Powered by OpenAI</p>
+            <p><small>Ce guide est également disponible en format PDF dans le dossier docs/</small></p>
+        </footer>
+    </div>
+</body>
+</html>
