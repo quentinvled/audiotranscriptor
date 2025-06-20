@@ -1,0 +1,33 @@
+# ==================================================
+# 📦 DÉPENDANCES VLED TRANSCRIPTOR
+# ==================================================
+# 
+# Ce fichier liste toutes les bibliothèques Python nécessaires
+# pour faire fonctionner votre application de transcription audio
+#
+# Installation automatique avec : pip install -r requirements.txt
+# ==================================================
+
+# Interface utilisateur moderne
+streamlit>=1.28.0          # Framework web pour l'interface
+                           # Pourquoi : crée l'interface web automatiquement
+
+# Intelligence artificielle 
+openai>=1.0.0              # API OpenAI pour Whisper et ChatGPT
+                           # Pourquoi : transcription audio + résumés IA
+
+# Gestion de configuration
+python-dotenv>=1.0.0       # Lecture des fichiers .env pour les secrets
+                           # Pourquoi : stockage sécurisé de la clé API
+
+# Monitoring système
+psutil>=5.9.0              # Informations système (RAM, disque, etc.)
+                           # Pourquoi : affiche les stats dans l'interface
+
+# Surveillance de fichiers
+watchdog>=3.0.0            # Surveillance des changements de fichiers
+                           # Pourquoi : rechargement automatique
+
+# Traitement de fichiers (optionnel - si vous voulez étendre)
+# pandas>=2.0.0            # Manipulation de données
+# requests>=2.28.0         # Requêtes HTTP avancées

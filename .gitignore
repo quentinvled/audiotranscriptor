@@ -1,0 +1,27 @@
+# Dossiers générés par l'application
+temp/
+exports/
+config/
+docs/
+__pycache__/
+
+# Fichiers de configuration sensibles
+*.env
+.env
+config/api_key.env
+
+# Fichiers Python
+*.pyc
+*.pyo
+*.pyd
+
+# Fichiers système
+.DS_Store
+Thumbs.db
+Desktop.ini
+
+# Logs
+*.log
+
+# Archives de sauvegarde
+*_Backup_*.zip
